@@ -273,3 +273,7 @@ footer {
 .address a img {
     width: 24px;
 }
+
+.address p {
+    color: white;
+}

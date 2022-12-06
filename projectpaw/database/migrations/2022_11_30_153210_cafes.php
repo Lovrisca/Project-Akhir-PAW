@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id('id_cafe');
             $table->string('nama_cafe');
             $table->string('no_telepon');
-            $table->string('definisi_cafe');
+            $table->string('definisi_cafe', (1000));
             $table->string('alamat_cafe');
             $table->string('foto_cafe');
         });

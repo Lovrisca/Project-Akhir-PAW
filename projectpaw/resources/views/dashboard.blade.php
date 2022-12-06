@@ -128,7 +128,7 @@
                     <div class="col-md-6">
                         <div class="image-cafe">
                             <a href="{{ url('/') }}">
-                                @if ($m->foto_menu != null)
+                                @if ($c->foto_cafe != null)
                                     <img width="100%" src="{{ asset('storage/' . $c->foto_cafe) }}">
                                 @else
                                     <img width="100%" src="{{ url('images/cafe-image.png') }}" alt="Gvyc-3-2">
@@ -143,7 +143,7 @@
 
     <!-- FASILITAS -->
     <section class="menu" id="facilities">
-        <div class="container"> 
+        <div class="container">
             <div class="row">
                 <div class="judul-menu" id="menu">
                     <p>Facilities</p>
@@ -155,7 +155,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="gelato">
-                                    <p>{{ $f->nama_fasilitas }}</p>
+                                    <div class="nama-gelato">{{ $f->nama_fasilitas }}</div>
                                 </div>
                                 <div class="gelato-image">
                                     <a href="{{ url('/') }}">
@@ -177,15 +177,20 @@
 
     <!-- FOOTER -->
     <footer>
+    @foreach ($cafes as $c)
         <div class="container" id="footer">
             <div class="footer-content">
                 <div class="address">
                     <a href="{{ url('/') }}"><img src="{{ url('images/maps.png') }}" alt=""></a>
-                    <p>Address</p>
+                    <p>{{ $c->alamat_cafe }}</p>
+                </div>&emsp;&emsp;
+                <div class="address">
+                    <a href="{{ url('/') }}"><img src="{{ url('images/Call.png') }}" alt=""></a>
+                    <p>{{ $c->no_telepon }}</p>
                 </div>
-
             </div>
         </div>
+        @endforeach
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
