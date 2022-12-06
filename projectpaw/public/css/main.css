@@ -1,0 +1,130 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+:root {
+    --main: #B6CCFE;
+    --second: #E1E6EF;
+    --accent: #444444;
+}
+
+body {
+    background-color: var(--second);
+}
+
+.container-content {
+    margin-left: 320px;
+    margin-top: 80px;
+    padding: 1em;
+}
+
+.content-head {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    background-color: #EDF2FB;
+    text-align: center;
+    align-items: center;
+}
+
+.btn-go-back {
+    background-color: var(--main);
+    padding: 0.5em 2em;
+    font-size: 15px;
+    border-radius: 30px;
+    border: var(--main);
+    color: var(--accent);
+}
+
+.btn-go-back:hover {
+    transform: translateY(-3px);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.go-back {
+    margin-left: 610px;
+}
+
+.container-body {
+    width: 100%;
+    min-height: 315px;
+    background-color: white;
+    padding: 10px 20px;
+}
+
+.content-body {
+    color: #B9BBBF;
+}
+
+#teks {
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.5em;
+    height: 40px;
+    border: 1px solid #B6BBBF;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.btn-save {
+    background-color: var(--main);
+    width: 75px;
+    height: 35px;
+    font-size: 15px;
+    margin-top: 15px;
+    border-radius: 30px;
+    border: var(--main);
+    color: var(--accent);
+    text-align: center;
+    align-items: center;
+}
+
+.btn-save:hover {
+    transform: translateY(-3px);
+}
+
+table {
+    font-family: 'Chakra Petch', sans-serif;
+    color: var(--accent);
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table,
+th,
+td {
+    border: 1px solid #B9BBBF;
+    padding: 10px 34px;
+}
+
+table,
+tr {
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.table-image {
+    width: 5em;
+}
+
+.sidebarBtn:hover {
+    transition: .7s;
+    padding-left: 50px;
+}
