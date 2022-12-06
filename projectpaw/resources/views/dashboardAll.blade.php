@@ -33,10 +33,10 @@
                         <a class="nav-link" href="#menu">MENU</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#facilities">FACILITY</a>
+                        <a class="nav-link" href="#">FACILITY</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#footer">CONTACT US</a>
+                        <a class="nav-link" href="#">CONTACT US</a>
                     </li>
                 </ul>
                 <div class="navbar-login text-center">
@@ -142,7 +142,7 @@
     </section>
 
     <!-- FASILITAS -->
-    <section class="menu" id="facilities">
+    <section class="menu">
         <div class="container">
             <div class="row">
                 <div class="judul-menu" id="menu">
@@ -155,7 +155,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="gelato">
-                                    <p class="w-100">{{ $f->nama_fasilitas }}</p>
+                                    <p class="w-100">Gelato</p>
                                 </div>
                                 <div class="gelato-image">
                                     <a href="{{ url('/') }}">
@@ -167,6 +167,10 @@
                                         @endif
                                     </a>
                                 </div>
+                                <div class="keterangan">
+                                    <div class="nama-gelato">{{ $f->nama_fasilitas }}</div>
+                                    <div class="keterangan-gelato">2 scoops</div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -177,7 +181,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="container" id="footer">
+        <div class="container">
             <div class="footer-content">
                 <div class="address">
                     <a href="{{ url('/') }}"><img src="{{ url('images/maps.png') }}" alt=""></a>
