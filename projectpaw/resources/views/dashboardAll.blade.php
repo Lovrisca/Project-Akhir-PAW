@@ -33,10 +33,10 @@
                         <a class="nav-link" href="#menu">MENU</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">FACILITY</a>
+                        <a class="nav-link" href="#facilities">FACILITY</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">CONTACT US</a>
+                        <a class="nav-link" href="#footer">CONTACT US</a>
                     </li>
                 </ul>
                 <div class="navbar-login text-center">
@@ -128,7 +128,7 @@
                     <div class="col-md-6">
                         <div class="image-cafe">
                             <a href="{{ url('/') }}">
-                                @if ($m->foto_menu != null)
+                                @if ($c->foto_cafe != null)
                                     <img width="100%" src="{{ asset('storage/' . $c->foto_cafe) }}">
                                 @else
                                     <img width="100%" src="{{ url('images/cafe-image.png') }}" alt="Gvyc-3-2">
@@ -142,7 +142,7 @@
     </section>
 
     <!-- FASILITAS -->
-    <section class="menu">
+    <section class="menu" id="facilities">
         <div class="container">
             <div class="row">
                 <div class="judul-menu" id="menu">
@@ -155,7 +155,9 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="gelato">
-                                    <p class="w-100">Gelato</p>
+                                    <p class="w-100">
+                                        <div class="nama-gelato">{{ $f->nama_fasilitas }}</div>
+                                    </p>
                                 </div>
                                 <div class="gelato-image">
                                     <a href="{{ url('/') }}">
@@ -167,10 +169,6 @@
                                         @endif
                                     </a>
                                 </div>
-                                <div class="keterangan">
-                                    <div class="nama-gelato">{{ $f->nama_fasilitas }}</div>
-                                    <div class="keterangan-gelato">2 scoops</div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -181,7 +179,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="container">
+        <div class="container" id="footer">
             <div class="footer-content">
                 <div class="address">
                     <a href="{{ url('/') }}"><img src="{{ url('images/maps.png') }}" alt=""></a>
