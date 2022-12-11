@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
     <div class="content-head d-flex justify-content-between">
-        <h4 style="color: #444444; padding-left: 15px; padding-top: 7px;">Create Menu</h4>
+        <h4 style="color: #444444; padding-left: 15px; padding-top: 7px;">Create Facility</h4>
         <a href="{{ route('facilities.index') }}" class=" btn-go-back me-3 text-decoration-none">Back</a>
     </div>
     <div class="content-body">

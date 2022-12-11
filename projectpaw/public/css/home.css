@@ -258,6 +258,11 @@ body {
     color: #FFFFFF;
 }
 
+.menu .nama-gelato {
+    text-align: center;
+    padding-top: 3%;
+}
+
 footer {
     background-color: #444444;
     height: 60px;
