@@ -21,5 +21,6 @@ class UserSeeder extends Seeder
             'email' => 'adminpusat@sixmines.com',
             'password' => Hash::make('password'),
         ]);
+        
     }
 }
