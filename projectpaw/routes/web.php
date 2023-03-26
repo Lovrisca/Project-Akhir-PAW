@@ -30,3 +30,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
     Route::resource('cafe', CafeController::class);
     Route::resource('facilities', FacilitiesController::class);
 });
+
+// Route::get('/a', function() {
+//     return "a";
+// });
