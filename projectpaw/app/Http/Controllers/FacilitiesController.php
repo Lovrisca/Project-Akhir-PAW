@@ -43,7 +43,6 @@ class FacilitiesController extends Controller
             'foto_fasilitas' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
 
-        if ($facility->foto_fasilitas != null && Storage::disk('public')->exists($facility->foto_fasilitas)) Storage::disk('public')->delete($facility->foto_fasilitas);
         if ($request->file() != null) $request->request->add(['foto_fasilitas' => $request->file('foto_fasilitas')->store('foto_fasilitas', 'public')]);
 
         $facility->fill($request->post())->save();
