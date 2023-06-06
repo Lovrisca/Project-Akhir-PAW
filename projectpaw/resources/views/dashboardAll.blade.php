@@ -46,27 +46,6 @@
         </div>
     </nav>
 
-    <!-- HERO IMAGE -->
-    <section class="hero">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="text-hero">
-                        <p class="out-special" id="home">OUR SPECIAL GELATO</p>
-                        <p class="change">Change Your Day<br>With Gelato</p>
-                        <p class="made">Made with premium fresh milk, processed with love, to give you an authentic
-                            smooth Italian taste</p>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="image-hero">
-                        <a href="{{ url('/') }}"><img src="{{ url('images/hero-images.png') }}" alt="Gvyc-3-2"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- MENU -->
     <section class="menu">
         <div class="container">
@@ -104,75 +83,8 @@
             </div>
             <div class="row">
                 <div class="view-more">
-                    <a href="/" class="btn-more text-decoration-none py-2 px-5">Hide</a>
+                    <a href="/" class="btn-more text-decoration-none py-2 px-5">Back</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CAFE -->
-    <section class="cafe">
-        @foreach ($cafes as $c)
-            <div class="container">
-                <div class="row">
-                    <div class="nama-cafe">
-                        <p>{{ $c->nama_cafe }}</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="text-cafe">
-                            <p class="made">{{ $c->definisi_cafe }}</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="image-cafe">
-                            <a href="{{ url('/') }}">
-                                @if ($c->foto_cafe != null)
-                                    <img width="100%" src="{{ asset('storage/' . $c->foto_cafe) }}">
-                                @else
-                                    <img width="100%" src="{{ url('images/cafe-image.png') }}" alt="Gvyc-3-2">
-                                @endif
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        @endforeach
-    </section>
-
-    <!-- FASILITAS -->
-    <section class="menu" id="facilities">
-        <div class="container">
-            <div class="row">
-                <div class="judul-menu" id="menu">
-                    <p>Facilities</p>
-                </div>
-            </div>
-            <div class="row">
-                @foreach ($facilities as $f)
-                    <div class="col-12 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="gelato">
-                                    <p class="w-100">
-                                        <div class="nama-gelato">{{ $f->nama_fasilitas }}</div>
-                                    </p>
-                                </div>
-                                <div class="gelato-image">
-                                    <a href="{{ url('/') }}">
-                                        @if ($f->foto_fasilitas != null)
-                                            <img width="100%" src="{{ asset('storage/' . $f->foto_fasilitas) }}">
-                                        @else
-                                            <img width="100%" src="{{ url('images/gelato1.png') }}"
-                                                type='image'>
-                                        @endif
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
             </div>
         </div>
     </section>
@@ -183,7 +95,7 @@
         <div class="container" id="footer">
             <div class="footer-content">
                 <div class="address">
-                    <a href="{{ url('/') }}"><img src="{{ url('images/maps.png') }}" alt=""></a>
+                    <a href="https://goo.gl/maps/4DzsuF11WK599bsP6"><img src="{{ url('images/maps.png') }}" alt=""></a>
                     <p>{{ $c->alamat_cafe }}</p>
                 </div>&emsp;&emsp;
                 <div class="address">

@@ -51,7 +51,7 @@ class CafeController extends Controller
             'foto_cafe' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
 
-        if ($cafe->foto_cafe != null && Storage::disk('public')->exists($cafe->foto_cafe)) Storage::disk('public')->delete($cafe->foto_cafe);
+        // if ($cafe->foto_cafe != null && Storage::disk('public')->exists($cafe->foto_cafe)) Storage::disk('public')->delete($cafe->foto_cafe);
         if ($request->file() != null) $request->request->add(['foto_cafe' => $request->file('foto_cafe')->store('foto_cafe', 'public')]);
 
         $cafe->fill($request->post())->save();

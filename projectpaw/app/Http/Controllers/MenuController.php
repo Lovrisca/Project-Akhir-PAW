@@ -46,8 +46,7 @@ class MenuController extends Controller
             'foto_menu' => 'image|mimes:jpg,png,jpeg,gif,svg|max:2048',
         ]);
 
-        if ($menu->foto_menu != null && Storage::disk('public')->exists($menu->foto_menu)) Storage::disk('public')->delete($menu->foto_menu);
-        if ($request->file() != null) $request->request->add(['foto_menu' => $request->file('foto_menu')->store('foto_menu', 'public')]);
+        if ($request->file() != null) $request->request->add(['foto_fasilitas' => $request->file('foto_fasilitas')->store('foto_fasilitas', 'public')]);
 
         $menu->fill($request->post())->save();
 
